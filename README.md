@@ -1,0 +1,89 @@
+# ResumeAI
+
+ResumeAI 是一个前后端分离项目：
+- 后端：Spring Boot + Spring AI + MyBatis-Plus + MySQL
+- 前端：Vue 3 + Vite + Element Plus
+
+## 目录结构
+
+- `backend`：Java 后端服务
+- `vue-frontend`：Vue 前端应用
+
+## 环境要求
+
+- JDK 17
+- Maven 3.9+
+- Node.js 18+
+- npm 9+
+- MySQL 8+
+
+## 后端启动
+
+1. 进入后端目录：
+
+```bash
+cd backend
+```
+
+2. 配置数据库与 AI Key（见 `src/main/resources/application.yml`）：
+
+- `spring.datasource.url`
+- `spring.datasource.username`
+- `spring.datasource.password`
+- `spring.ai.openai.api-key`
+
+3. 启动后端：
+
+```bash
+mvn spring-boot:run
+```
+
+4. 默认端口：
+
+- `9090`
+
+## 前端启动
+
+1. 进入前端目录：
+
+```bash
+cd vue-frontend
+```
+
+2. 安装依赖：
+
+```bash
+npm install
+```
+
+3. 启动开发环境：
+
+```bash
+npm run dev
+```
+
+4. 生产构建：
+
+```bash
+npm run build
+```
+
+## 本地联调建议
+
+- 先启动 MySQL，并确保库表已初始化
+- 启动后端（9090）
+- 启动前端（Vite 默认 5173）
+- 检查前端请求地址是否指向后端 9090
+
+## 常见问题
+
+- 如果 `npm install` 出现 audit 相关失败，可尝试：
+
+```bash
+npm install --no-audit
+```
+
+## 安全建议
+
+当前项目配置中可能包含敏感信息（如 API Key、数据库密码）。
+建议尽快改为环境变量注入，并轮换已泄露密钥。
