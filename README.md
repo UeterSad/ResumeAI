@@ -95,7 +95,3 @@ npm run build
 npm install --no-audit
 ```
 
-## 安全建议
-
-当前项目配置中可能包含敏感信息（如 API Key、数据库密码）。
-建议尽快改为环境变量注入，并轮换已泄露密钥。
