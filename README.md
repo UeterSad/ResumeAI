@@ -32,6 +32,18 @@ cd backend
 - `spring.datasource.password`
 - `spring.ai.openai.api-key`
 
+推荐使用环境变量，不要把密钥直接写入仓库。例如：
+
+```bash
+AIHUBMIX_API_KEY=your_api_key
+DB_URL=jdbc:mysql://localhost:3306/resumeai?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+DB_USERNAME=root
+DB_PASSWORD=your_db_password
+MAIL_HOST=smtp.example.com
+MAIL_USERNAME=your_mail_user
+MAIL_PASSWORD=your_mail_password
+```
+
 3. 启动后端：
 
 ```bash
